@@ -1,34 +1,52 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Providers } from "@/lib/providers";
+import { Navigation } from "@/features/public/home/components/Navigation";
+import { Footer } from "@/features/public/home/components/Footer";
+import { ThemeProvider } from "@/features/public/home/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { Karla, Manrope, Spline_Sans } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Eghara Bookings",
-  description: "Sports booking and management platform",
+export const metadata = {
+  title: "Eghara Bookings - Premium Futsal Booking Platform",
+  description:
+    "Book premium futsal courts across Nepal with real-time availability",
 };
+
+const splineSans = Spline_Sans({
+  variable: "--font-spline-sans",
+  subsets: ["latin"],
+});
+
+const karla = Karla({
+  variable: "--font-karla",
+  subsets: ["latin"],
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`min-h-screen ${splineSans.variable} ${karla.variable} ${manrope.variable} font-manrope antialiased`}
       >
-        <Providers>{children}</Providers>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

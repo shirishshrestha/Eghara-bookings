@@ -6,8 +6,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-spline-sans: var(--font-spline-sans);
+  --font-manrope: var(--font-manrope);
+  --font-karla: var(--font-karla);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
@@ -38,237 +39,185 @@
 
 @layer base {
   :root {
-    /* Base Colors */
     --background: rgb(250 250 250);
     --foreground: rgb(0 0 0);
-    /* Card */
+
     --card: rgb(255 255 255);
     --card-foreground: rgb(0 0 0);
 
-    /* Popover */
     --popover: rgb(255 255 255);
     --popover-foreground: rgb(0 0 0);
 
-    /* Primary */
     --primary: rgba(0, 152, 95, 1);
     --primary-foreground: rgb(255 255 255);
 
-    /* Secondary */
     --secondary: rgb(245 245 245);
     --secondary-foreground: rgb(0 0 0);
 
-    /* Muted */
     --muted: rgb(240 240 240);
     --muted-foreground: rgb(113 113 113);
 
-    /* Accent */
     --accent: rgb(242 244 247);
     --accent-foreground: rgb(0 0 0);
 
-    /* Destructive */
     --destructive: rgb(221 54 54);
     --destructive-foreground: rgb(255 255 255);
 
-    /* Border */
     --border: rgb(232 232 232);
     --input: rgb(232 232 232);
 
-    /* Ring */
     --ring: rgb(0 152 95);
 
-    /* Radius */
     --radius: 0.5rem;
 
-    /* Custom Sport Theme Colors */
     --success: rgb(0 152 95);
     --warning: rgb(221 54 54);
     --info: rgb(14 135 224);
 
-    /* Text Colors */
     --text-secondary: rgb(159 159 159);
     --text-tertiary: rgb(113 113 113);
     --text-light: rgb(152 152 152);
 
-    /* Hover States */
     --hover-background: rgb(234 234 234);
     --hover-link: rgb(0 152 95);
 
-    /* Divider */
     --divider: rgb(245 245 245);
 
-    /* Chart Colors */
     --chart-1: rgb(0 152 95);
     --chart-2: rgb(14 135 224);
     --chart-3: rgb(255 206 44);
     --chart-4: rgb(221 54 54);
     --chart-5: rgb(89 100 112);
 
-    /* Sport-Specific Colors */
     --win: rgb(0 152 95);
     --lose: rgb(221 54 54);
     --draw: rgb(89 100 112);
 
-    /* Player Rating Colors */
     --rating-blue: rgb(20 160 255);
     --rating-green: rgb(51 199 113);
     --rating-orange: rgb(240 128 34);
     --rating-red: rgb(221 54 54);
 
-    /* Event Icons */
     --event-yellow: rgb(255 206 44);
     --event-red: rgb(221 54 54);
     --event-green: rgb(0 152 95);
     --event-grey: rgb(234 234 234);
 
-    /* Tooltip */
     --tooltip-bg: rgb(51 51 51);
     --tooltip-text: rgb(255 255 255);
 
-    /* Table Colors */
     --table-hover: rgb(250 250 250);
     --table-border: rgb(245 245 245);
 
-    /* Button Variants */
     --button-hover: rgb(234 234 234);
     --button-active: rgb(0 0 0);
     --button-active-text: rgb(255 255 255);
 
-    /* Header */
     --header-bg: rgb(255 255 255);
     --header-border: rgb(245 245 245);
 
-    /* Footer */
     --footer-bg: rgb(237 237 237);
     --footer-bottom: rgb(234 234 234);
     --footer-text: rgb(34 34 34);
     --footer-secondary: rgb(113 113 113);
 
-    /* Dropdown */
     --dropdown-hover: rgb(240 240 240);
     --dropdown-selected: rgb(240 240 240);
 
-    /* Badge/Chip */
     --badge-background: rgb(240 240 240);
     --badge-text: rgb(0 0 0);
 
-    /* Link */
     --link: rgb(0 178 133);
     --link-hover: rgb(0 152 95);
   }
 
   .dark {
-    /* Base Colors */
     --background: rgb(0 0 0);
     --foreground: rgb(255 255 255);
 
-    /* Card */
     --card: rgb(29 29 29);
     --card-foreground: rgb(255 255 255);
 
-    /* Popover */
     --popover: rgb(29 29 29);
     --popover-foreground: rgb(255 255 255);
 
-    /* Primary */
     --primary: rgb(97 223 110);
     --primary-foreground: rgb(0 0 0);
 
-    /* Secondary */
     --secondary: rgb(20 20 20);
     --secondary-foreground: rgb(255 255 255);
 
-    /* Muted */
     --muted: rgb(51 51 51);
     --muted-foreground: rgb(159 159 159);
 
-    /* Accent */
     --accent: rgb(40 40 40);
     --accent-foreground: rgb(255 255 255);
 
-    /* Destructive */
     --destructive: rgb(255 48 48);
     --destructive-foreground: rgb(255 255 255);
 
-    /* Border */
     --border: rgb(40 40 40);
     --input: rgb(40 40 40);
 
-    /* Ring */
     --ring: rgb(97 223 110);
 
-    /* Custom Sport Theme Colors */
     --success: rgb(51 199 113);
     --warning: rgb(255 48 48);
     --info: rgb(14 135 224);
 
-    /* Text Colors */
     --text-secondary: rgb(159 159 159);
     --text-tertiary: rgb(159 159 159);
     --text-light: rgb(113 113 113);
 
-    /* Hover States */
     --hover-background: rgb(51 51 51);
     --hover-link: rgb(131 131 131);
 
-    /* Divider */
     --divider: rgb(51 51 51);
 
-    /* Chart Colors */
     --chart-1: rgb(51 199 113);
     --chart-2: rgb(20 160 255);
     --chart-3: rgb(255 206 44);
     --chart-4: rgb(255 48 48);
     --chart-5: rgb(89 100 112);
 
-    /* Sport-Specific Colors */
     --win: rgb(0 152 95);
     --lose: rgb(221 54 54);
     --draw: rgb(89 100 112);
 
-    /* Player Rating Colors */
     --rating-blue: rgb(20 160 255);
     --rating-green: rgb(51 199 113);
     --rating-orange: rgb(255 150 63);
     --rating-red: rgb(255 57 57);
 
-    /* Event Icons */
     --event-yellow: rgb(255 206 44);
     --event-red: rgb(255 48 48);
     --event-green: rgb(51 199 113);
     --event-grey: rgb(70 70 70);
 
-    /* Tooltip */
     --tooltip-bg: rgb(97 223 110);
     --tooltip-text: rgb(0 0 0);
 
-    /* Table Colors */
     --table-hover: rgb(38 38 38);
     --table-border: rgb(51 51 51);
 
-    /* Button Variants */
     --button-hover: rgb(60 60 60);
     --button-active: rgb(255 255 255);
     --button-active-text: rgb(0 0 0);
 
-    /* Header */
     --header-bg: rgb(26 26 26);
     --header-border: rgb(0 0 0);
 
-    /* Footer */
     --footer-bg: rgb(26 26 26);
     --footer-bottom: rgb(29 29 29);
     --footer-text: rgb(255 255 255);
     --footer-secondary: rgb(159 159 159);
 
-    /* Dropdown */
     --dropdown-hover: rgb(43 43 43);
     --dropdown-selected: rgb(51 51 51);
 
-    /* Badge/Chip */
     --badge-background: rgb(51 51 51);
     --badge-text: rgb(255 255 255);
 
-    /* Link */
     --link: rgb(128 128 255);
     --link-hover: rgb(131 131 131);
   }
@@ -276,14 +225,40 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
+  }
+
+  h1 {
+    @apply font-spline-sans text-6xl font-semibold max-sm:text-4xl;
+  }
+
+  h2 {
+    @apply font-spline-sans text-4xl font-bold;
+  }
+
+  h3 {
+    @apply font-spline-sans text-2xl font-bold;
+  }
+
+  ul {
+    @apply list-disc list-inside;
   }
 
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  /* Custom scrollbar styling */
+  .wrapper {
+    @apply container mx-auto;
+  }
+
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -294,10 +269,47 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/20 rounded-md;
+    @apply bg-muted-foreground/40 rounded-md;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/30;
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Infinite Moving Cards Animation */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-25% - 0.25rem));
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll var(--animation-duration, 40s)
+      var(--animation-direction, forwards) linear infinite;
+  }
+
+  .hover\:paused:hover {
+    animation-play-state: paused;
+  }
+
+  /* Mask gradient for fade effect */
+  .mask-\[linear-gradient\(to_right\,transparent\,white_20\%\,white_80\%\,transparent\)\] {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
   }
 }
