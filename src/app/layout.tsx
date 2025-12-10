@@ -1,34 +1,52 @@
-import type { Metadata } from "next";
-import { Manrope, Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
-import { Providers } from "@/lib/providers";
+import { Navigation } from "@/features/public/home/components/Navigation";
+import { Footer } from "@/features/public/home/components/Footer";
+import { ThemeProvider } from "@/features/public/home/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { Karla, Manrope, Spline_Sans } from "next/font/google";
 
-const schibstedGrotesk = Schibsted_Grotesk({
-  variable: "--font-schibsted-grotesk",
+export const metadata = {
+  title: "Eghara Bookings - Premium Futsal Booking Platform",
+  description:
+    "Book premium futsal courts across Nepal with real-time availability",
+};
+
+const splineSans = Spline_Sans({
+  variable: "--font-spline-sans",
+  subsets: ["latin"],
+});
+
+const karla = Karla({
+  variable: "--font-karla",
   subsets: ["latin"],
 });
 
 const manrope = Manrope({
-  variable: "--font-manrope ",
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Eghara Bookings",
-  description: "Sports booking and management platform",
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${schibstedGrotesk.variable} ${manrope.variable} font-manrope antialiased`}
+        className={`min-h-screen ${splineSans.variable} ${karla.variable} ${manrope.variable} font-manrope antialiased`}
       >
-        <Providers>{children}</Providers>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

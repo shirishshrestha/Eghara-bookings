@@ -6,8 +6,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-schibsted-grotesk: var(--font-schibsted-grotesk);
+  --font-spline-sans: var(--font-spline-sans);
   --font-manrope: var(--font-manrope);
+  --font-karla: var(--font-karla);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
@@ -222,41 +223,21 @@
   }
 }
 
-@utility flex-center {
-  @apply flex items-center justify-center;
-}
-
-@utility text-gradient {
-  @apply bg-linear-to-b from-foreground to-foreground/70 bg-clip-text font-semibold text-transparent;
-}
-
-@utility glass {
-  @apply bg-[#12121280]/50 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl border-b border-border;
-}
-
-@utility card-shadow {
-  box-shadow: 0px 4px 40px 0px #00000066;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
 
-  .wrapper {
-    @apply mx-auto container flex flex-col sm:px-10 px-5 py-10;
-  }
-
   h1 {
-    @apply font-schibsted-grotesk text-6xl font-semibold max-sm:text-4xl;
+    @apply font-spline-sans text-6xl font-semibold max-sm:text-4xl;
   }
 
   h2 {
-    @apply font-schibsted-grotesk text-4xl font-bold;
+    @apply font-spline-sans text-4xl font-bold;
   }
 
   h3 {
-    @apply font-schibsted-grotesk text-2xl font-bold;
+    @apply font-spline-sans text-2xl font-bold;
   }
 
   ul {
@@ -266,6 +247,10 @@
   body {
     @apply bg-background text-foreground;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .wrapper {
+    @apply container mx-auto;
   }
 
   * {
@@ -284,10 +269,47 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/20 rounded-md;
+    @apply bg-muted-foreground/40 rounded-md;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/30;
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Infinite Moving Cards Animation */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-25% - 0.25rem));
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll var(--animation-duration, 40s)
+      var(--animation-direction, forwards) linear infinite;
+  }
+
+  .hover\:paused:hover {
+    animation-play-state: paused;
+  }
+
+  /* Mask gradient for fade effect */
+  .mask-\[linear-gradient\(to_right\,transparent\,white_20\%\,white_80\%\,transparent\)\] {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
   }
 }
