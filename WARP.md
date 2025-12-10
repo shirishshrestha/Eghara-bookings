@@ -6,11 +6,11 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ### Development
 ```powershell
-npm install          # Install dependencies
-npm run dev          # Start development server (http://localhost:3000)
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
+pnpm install         # Install dependencies
+pnpm dev             # Start development server (http://localhost:3000)
+pnpm build           # Build for production
+pnpm start           # Start production server
+pnpm lint            # Run ESLint
 ```
 
 ### Adding shadcn/ui Components
