@@ -1,8 +1,8 @@
-"use client";
-import React from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const HeroParallax = ({
   products,
@@ -19,35 +19,20 @@ export const HeroParallax = ({
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ['start start', 'end start'],
   });
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
-  );
+  const translateX = useSpring(useTransform(scrollYProgress, [0, 1], [0, 1000]), springConfig);
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
     springConfig
   );
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
-  );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
-  );
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
-  );
-  const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
-  );
+  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
+  const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springConfig);
+  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
+  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
   return (
     <div
       ref={ref}
@@ -64,30 +49,18 @@ export const HeroParallax = ({
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+          {firstRow.map(product => (
+            <ProductCard product={product} translate={translateX} key={product.title} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row mb-20 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
+          {secondRow.map(product => (
+            <ProductCard product={product} translate={translateXReverse} key={product.title} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+          {thirdRow.map(product => (
+            <ProductCard product={product} translate={translateX} key={product.title} />
           ))}
         </motion.div>
       </motion.div>
@@ -100,13 +73,11 @@ export const Header = () => {
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold text-neutral-900 dark:text-white">
         Featured Courts <br />
-        <span className="text-emerald-600 dark:text-emerald-400">
-          Book Your Perfect Match
-        </span>
+        <span className="text-emerald-600 dark:text-emerald-400">Book Your Perfect Match</span>
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-600 dark:text-neutral-400">
-        Explore our handpicked selection of premium futsal courts across Nepal.
-        Each venue is verified for quality and equipped with modern facilities.
+        Explore our handpicked selection of premium futsal courts across Nepal. Each venue is
+        verified for quality and equipped with modern facilities.
       </p>
     </div>
   );
@@ -134,10 +105,7 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
+      <Link href={product.link} className="block group-hover/product:shadow-2xl ">
         <Image
           src={product.thumbnail}
           height="600"

@@ -178,10 +178,10 @@ Users can toggle via navigation menu. No code changes needed!
 ### Toasts
 
 ```tsx
-import { toast } from "sonner";
+import { toast } from 'sonner';
 
-toast.success("Booking confirmed!");
-toast.error("Payment failed");
+toast.success('Booking confirmed!');
+toast.error('Payment failed');
 ```
 
 ### Theme in Components

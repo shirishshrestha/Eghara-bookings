@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import React, { useCallback, useEffect, useState } from "react";
+import { cn } from '@/lib/utils';
+import React, { useCallback, useEffect, useState } from 'react';
 
 export const InfiniteMovingCards = ({
   items,
-  direction = "left",
-  speed = "slow",
+  direction = 'left',
+  speed = 'slow',
   pauseOnHover = true,
   className,
 }: {
@@ -16,8 +16,8 @@ export const InfiniteMovingCards = ({
     content: string;
     role: string;
   }[];
-  direction?: "left" | "right";
-  speed?: "fast" | "normal" | "slow";
+  direction?: 'left' | 'right';
+  speed?: 'fast' | 'normal' | 'slow';
   pauseOnHover?: boolean;
   className?: string;
 }) => {
@@ -28,28 +28,22 @@ export const InfiniteMovingCards = ({
 
   const getDirection = useCallback(() => {
     if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
+      if (direction === 'left') {
+        containerRef.current.style.setProperty('--animation-direction', 'forwards');
       } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
+        containerRef.current.style.setProperty('--animation-direction', 'reverse');
       }
     }
   }, [direction]);
 
   const getSpeed = useCallback(() => {
     if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "30s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "60s");
+      if (speed === 'fast') {
+        containerRef.current.style.setProperty('--animation-duration', '30s');
+      } else if (speed === 'normal') {
+        containerRef.current.style.setProperty('--animation-duration', '60s');
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty('--animation-duration', '80s');
       }
     }
   }, [speed]);
@@ -61,7 +55,7 @@ export const InfiniteMovingCards = ({
       // Create multiple duplicates for seamless infinite scroll
       // Duplicate 3 more times (total of 4 sets of items)
       for (let i = 0; i < 3; i++) {
-        scrollerContent.forEach((item) => {
+        scrollerContent.forEach(item => {
           const duplicatedItem = item.cloneNode(true);
           if (scrollerRef.current) {
             scrollerRef.current.appendChild(duplicatedItem);
@@ -73,8 +67,8 @@ export const InfiniteMovingCards = ({
       getSpeed();
 
       // Set initial position for right direction to start cards visible
-      if (direction === "right" && scrollerRef.current) {
-        scrollerRef.current.style.transform = "translateX(0)";
+      if (direction === 'right' && scrollerRef.current) {
+        scrollerRef.current.style.transform = 'translateX(0)';
       }
 
       setTimeout(() => setStart(true), 0);
@@ -89,23 +83,20 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  overflow-hidden mask-[linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        'scroller relative z-20  overflow-hidden mask-[linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full list-none shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll",
-          pauseOnHover && "hover:paused"
+          'flex min-w-full list-none shrink-0 gap-4 py-4 w-max flex-nowrap',
+          start && 'animate-scroll',
+          pauseOnHover && 'hover:paused'
         )}
       >
-        {items.map((item) => (
-          <li
-            className="group w-[380px] max-w-full relative shrink-0 md:w-[480px]"
-            key={item.name}
-          >
+        {items.map(item => (
+          <li className="group w-[380px] max-w-full relative shrink-0 md:w-[480px]" key={item.name}>
             {/* Gradient border effect */}
             <div className="absolute -inset-px bg-linear-to-r from-emerald-500 via-cyan-500 to-emerald-500 rounded-3xl opacity-0 group-hover:opacity-100 blur-sm transition-all duration-500" />
 
@@ -117,11 +108,7 @@ export const InfiniteMovingCards = ({
               <blockquote className="relative z-10">
                 {/* Quote icon */}
                 <div className="absolute -top-2 -left-2 text-emerald-500/20 dark:text-emerald-400/20">
-                  <svg
-                    className="w-16 h-16"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.5 10c-1.833 0-3.5 1.167-3.5 3.5S4.667 17 6.5 17c1.25 0 2.25-.5 3-1.5-.5 2.5-2.5 4.5-5 4.5v2c4.5 0 7-4 7-8.5S9.333 10 6.5 10zm10 0c-1.833 0-3.5 1.167-3.5 3.5s1.667 3.5 3.5 3.5c1.25 0 2.25-.5 3-1.5-.5 2.5-2.5 4.5-5 4.5v2c4.5 0 7-4 7-8.5s-2.667-3.5-5.5-3.5z" />
                   </svg>
                 </div>
@@ -152,8 +139,7 @@ export const InfiniteMovingCards = ({
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={
-                        item.image ||
-                        `https://api.dicebear.com/7.x/avataaars/svg?seed=${item.name}`
+                        item.image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${item.name}`
                       }
                       alt={item.name}
                       className="relative w-12 h-12 rounded-full border-2 border-white dark:border-neutral-900 object-cover"
@@ -161,9 +147,7 @@ export const InfiniteMovingCards = ({
                   </div>
 
                   <div className="flex-1">
-                    <div className="font-bold text-neutral-900 dark:text-white">
-                      {item.name}
-                    </div>
+                    <div className="font-bold text-neutral-900 dark:text-white">{item.name}</div>
                     <div className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">
                       {item.role}
                     </div>

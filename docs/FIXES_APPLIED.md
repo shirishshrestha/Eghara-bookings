@@ -114,24 +114,18 @@ All critical issues have been resolved and the application is now working correc
 ### Light Mode Colors (All Visible)
 
 ```css
---background: rgb(250 250 250)     /* Off-white background */
---foreground: rgb(0 0 0)           /* Black text */
---primary: rgb(16 185 129)         /* Emerald green */
---secondary: rgb(245 245 245)      /* Light gray */
---muted: rgb(240 240 240)          /* Subtle gray */
---border: rgb(229 229 229)         /* Border gray */
---destructive: rgb(239 68 68)      /* Red for errors */
+--background: rgb(250 250 250) /* Off-white background */ --foreground: rgb(0 0 0) /* Black text */
+  --primary: rgb(16 185 129) /* Emerald green */ --secondary: rgb(245 245 245) /* Light gray */
+  --muted: rgb(240 240 240) /* Subtle gray */ --border: rgb(229 229 229) /* Border gray */
+  --destructive: rgb(239 68 68) /* Red for errors */;
 ```
 
 ### Dark Mode Colors (All Visible)
 
 ```css
---background: rgb(0 0 0)           /* True black */
---foreground: rgb(255 255 255)     /* White text */
---primary: rgb(52 211 153)         /* Bright emerald */
---secondary: rgb(38 38 38)         /* Dark gray */
---muted: rgb(38 38 38)             /* Muted dark */
---border: rgb(38 38 38)            /* Border dark */
+--background: rgb(0 0 0) /* True black */ --foreground: rgb(255 255 255) /* White text */
+  --primary: rgb(52 211 153) /* Bright emerald */ --secondary: rgb(38 38 38) /* Dark gray */
+  --muted: rgb(38 38 38) /* Muted dark */ --border: rgb(38 38 38) /* Border dark */;
 ```
 
 ---

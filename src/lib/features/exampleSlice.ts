@@ -1,5 +1,5 @@
 // Example Redux slice - Add your own slices here
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ExampleState {
   count: number;
@@ -10,13 +10,13 @@ const initialState: ExampleState = {
 };
 
 const exampleSlice = createSlice({
-  name: "example",
+  name: 'example',
   initialState,
   reducers: {
-    increment: (state) => {
+    increment: state => {
       state.count += 1;
     },
-    decrement: (state) => {
+    decrement: state => {
       state.count -= 1;
     },
     incrementByAmount: (state, action: PayloadAction<number>) => {

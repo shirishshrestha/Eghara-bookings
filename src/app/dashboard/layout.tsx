@@ -8,20 +8,12 @@ async function checkAuth() {
   return isAuthenticated;
 }
 
-export default async function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const isAuthenticated = await checkAuth();
 
   if (!isAuthenticated) {
     redirect('/login');
   }
 
-  return (
-    <div className="min-h-screen bg-background">
-      {children}
-    </div>
-  );
+  return <div className="min-h-screen bg-background">{children}</div>;
 }

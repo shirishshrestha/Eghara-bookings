@@ -242,40 +242,29 @@ Border: rgb(40, 40, 40)            #282828
 **Primary Green (Keep but refine):**
 
 ```css
---primary-50: rgb(236, 253, 245)   #ECFDF5
---primary-100: rgb(209, 250, 229)  #D1FAE5
---primary-200: rgb(167, 243, 208)  #A7F3D0
---primary-300: rgb(110, 231, 183)  #6EE7B7
---primary-400: rgb(52, 211, 153)   #34D399
---primary-500: rgb(16, 185, 129)   #10B981 (Main)
---primary-600: rgb(5, 150, 105)    #059669
---primary-700: rgb(4, 120, 87)     #047857
---primary-800: rgb(6, 95, 70)      #065F46
---primary-900: rgb(6, 78, 59)      #064E3B
+--primary-50: rgb(236, 253, 245) #ecfdf5 --primary-100: rgb(209, 250, 229) #d1fae5
+  --primary-200: rgb(167, 243, 208) #a7f3d0 --primary-300: rgb(110, 231, 183) #6ee7b7
+  --primary-400: rgb(52, 211, 153) #34d399 --primary-500: rgb(16, 185, 129) #10b981 (Main)
+  --primary-600: rgb(5, 150, 105) #059669 --primary-700: rgb(4, 120, 87) #047857
+  --primary-800: rgb(6, 95, 70) #065f46 --primary-900: rgb(6, 78, 59) #064e3b;
 ```
 
 **Secondary/Neutral:**
 
 ```css
---neutral-50: rgb(250, 250, 250)   #FAFAFA
---neutral-100: rgb(245, 245, 245)  #F5F5F5
---neutral-200: rgb(229, 229, 229)  #E5E5E5
---neutral-300: rgb(212, 212, 212)  #D4D4D4
---neutral-400: rgb(163, 163, 163)  #A3A3A3
---neutral-500: rgb(115, 115, 115)  #737373
---neutral-600: rgb(82, 82, 82)     #525252
---neutral-700: rgb(64, 64, 64)     #404040
---neutral-800: rgb(38, 38, 38)     #262626
---neutral-900: rgb(23, 23, 23)     #171717
+--neutral-50: rgb(250, 250, 250) #fafafa --neutral-100: rgb(245, 245, 245) #f5f5f5
+  --neutral-200: rgb(229, 229, 229) #e5e5e5 --neutral-300: rgb(212, 212, 212) #d4d4d4
+  --neutral-400: rgb(163, 163, 163) #a3a3a3 --neutral-500: rgb(115, 115, 115) #737373
+  --neutral-600: rgb(82, 82, 82) #525252 --neutral-700: rgb(64, 64, 64) #404040
+  --neutral-800: rgb(38, 38, 38) #262626 --neutral-900: rgb(23, 23, 23) #171717;
 ```
 
 **Accent Colors:**
 
 ```css
---accent-blue: rgb(59, 130, 246)   #3B82F6 (Info)
---accent-yellow: rgb(234, 179, 8)  #EAB308 (Warning)
---accent-red: rgb(239, 68, 68)     #EF4444 (Error)
---accent-orange: rgb(249, 115, 22) #F97316 (Featured)
+--accent-blue: rgb(59, 130, 246) #3b82f6 (Info) --accent-yellow: rgb(234, 179, 8) #eab308 (Warning)
+  --accent-red: rgb(239, 68, 68) #ef4444 (Error) --accent-orange: rgb(249, 115, 22) #f97316
+  (Featured);
 ```
 
 ### 2.3 Typography System
@@ -283,9 +272,9 @@ Border: rgb(40, 40, 40)            #282828
 **Font Stack:**
 
 ```css
---font-display: "Schibsted Grotesk", system-ui, sans-serif;
---font-body: "Manrope", system-ui, sans-serif;
---font-mono: "JetBrains Mono", monospace;
+--font-display: 'Schibsted Grotesk', system-ui, sans-serif;
+--font-body: 'Manrope', system-ui, sans-serif;
+--font-mono: 'JetBrains Mono', monospace;
 ```
 
 **Type Scale (1.250 - Major Third):**
