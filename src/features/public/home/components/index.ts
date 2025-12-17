@@ -1,9 +1,1 @@
 export { HomePage } from "./HomePage";
-export { Navigation } from "./Navigation";
-export { Footer } from "./Footer";
-export { DiscoveryPage } from "./DiscoveryPage";
-export { BookingPage } from "./BookingPage";
-export { ProfilePage } from "./ProfilePage";
-export { OwnerDashboard } from "./OwnerDashboard";
-export { PlayerDashboard } from "./PlayerDashboard";
-export { ThemeProvider } from "./theme-provider";

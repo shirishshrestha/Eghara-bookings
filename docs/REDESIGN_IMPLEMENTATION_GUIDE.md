@@ -298,23 +298,23 @@ Already implemented in Navigation! Users can:
 ### Toast Notifications
 
 ```tsx
-import { toast } from "sonner";
+import { toast } from 'sonner';
 
 // Success
-toast.success("Booking confirmed!");
+toast.success('Booking confirmed!');
 
 // Error
-toast.error("Something went wrong");
+toast.error('Something went wrong');
 
 // Info
-toast.info("Processing your request");
+toast.info('Processing your request');
 
 // Custom
-toast("Custom message", {
-  description: "Additional details",
+toast('Custom message', {
+  description: 'Additional details',
   action: {
-    label: "Undo",
-    onClick: () => console.log("Undo"),
+    label: 'Undo',
+    onClick: () => console.log('Undo'),
   },
 });
 ```
@@ -335,24 +335,20 @@ All components now automatically support dark mode:
 ## 🐛 BUGS FIXED
 
 1. ✅ **ImageWithFallback Client Component Error**
-
    - Added "use client" directive
    - Now works in server components
 
 2. ✅ **Dynamic Route Params (Next.js 16)**
-
    - Updated futsal/[id]/page.tsx
    - Updated booking/[id]/page.tsx
    - Now properly awaits params Promise
 
 3. ✅ **Navigation Conflict**
-
    - Removed duplicate Header.tsx
    - Single Navigation component
    - Better mobile menu
 
 4. ✅ **CSS Variable Anti-pattern**
-
    - Removed `text-[var(--text-tertiary)]`
    - Now uses proper Tailwind classes
    - Better tree-shaking
@@ -393,13 +389,11 @@ All components now automatically support dark mode:
 ## 🎯 PERFORMANCE IMPROVEMENTS
 
 1. **Reduced CSS Bundle**
-
    - Removed unused CSS variables
    - Better Tailwind purging
    - Smaller production build
 
 2. **Better Hydration**
-
    - Theme provider optimized
    - No flash of unstyled content
    - Smooth client-side hydration

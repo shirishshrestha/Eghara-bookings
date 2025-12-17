@@ -67,16 +67,12 @@ Users can toggle theme in navigation menu (sun/moon icon).
 ### In Your Code
 
 ```tsx
-import { useTheme } from "next-themes";
+import { useTheme } from 'next-themes';
 
 function MyComponent() {
   const { theme, setTheme } = useTheme();
 
-  return (
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-      Toggle
-    </button>
-  );
+  return <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle</button>;
 }
 ```
 
@@ -85,28 +81,28 @@ function MyComponent() {
 ## 🔔 Toast Notifications
 
 ```tsx
-import { toast } from "sonner";
+import { toast } from 'sonner';
 
 // Success
-toast.success("Booking confirmed!");
+toast.success('Booking confirmed!');
 
 // Error
-toast.error("Failed to save changes");
+toast.error('Failed to save changes');
 
 // Info
-toast.info("Processing your request...");
+toast.info('Processing your request...');
 
 // With action
-toast("Booking cancelled", {
+toast('Booking cancelled', {
   action: {
-    label: "Undo",
+    label: 'Undo',
     onClick: () => restoreBooking(),
   },
 });
 
 // With description
-toast.success("Payment received", {
-  description: "Receipt sent to your email",
+toast.success('Payment received', {
+  description: 'Receipt sent to your email',
 });
 ```
 
@@ -281,17 +277,14 @@ import Link from "next/link";
 ### Active Links
 
 ```tsx
-import { usePathname } from "next/navigation";
+import { usePathname } from 'next/navigation';
 
 function NavLink({ href, children }) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
   return (
-    <Link
-      href={href}
-      className={isActive ? "text-foreground" : "text-muted-foreground"}
-    >
+    <Link href={href} className={isActive ? 'text-foreground' : 'text-muted-foreground'}>
       {children}
     </Link>
   );
@@ -343,7 +336,7 @@ function NavLink({ href, children }) {
 ### Loading State
 
 ```tsx
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from '@/components/ui/skeleton';
 
 {
   loading ? <Skeleton className="h-8 w-full" /> : <p>{data}</p>;
@@ -367,9 +360,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 <Alert variant="destructive">
   <AlertCircle className="h-4 w-4" />
   <AlertTitle>Error</AlertTitle>
-  <AlertDescription>
-    Failed to load bookings. Please try again.
-  </AlertDescription>
+  <AlertDescription>Failed to load bookings. Please try again.</AlertDescription>
 </Alert>
 ```
 
@@ -380,14 +371,14 @@ import { Skeleton } from "@/components/ui/skeleton";
 1. **Use Next.js Image**
 
    ```tsx
-   import Image from "next/image";
+   import Image from 'next/image';
    <Image src="/image.jpg" alt="..." width={500} height={300} />;
    ```
 
 2. **Lazy Load Components**
 
    ```tsx
-   const HeavyComponent = dynamic(() => import("./Heavy"), {
+   const HeavyComponent = dynamic(() => import('./Heavy'), {
      loading: () => <Skeleton />,
    });
    ```
@@ -395,7 +386,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 3. **Optimize Icons**
    ```tsx
    // Only import what you need
-   import { User, Settings } from "lucide-react";
+   import { User, Settings } from 'lucide-react';
    ```
 
 ---

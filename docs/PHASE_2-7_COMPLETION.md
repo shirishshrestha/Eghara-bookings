@@ -15,7 +15,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
 #### Features Implemented:
 
 - ✅ **Enhanced Hero Section**
-
   - Gradient background with grid pattern overlay
   - Animated entrance effects with staggered delays
   - Trending badge with icon
@@ -23,28 +22,24 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Responsive design for all devices
 
 - ✅ **Animated Stats Counter**
-
   - Custom `AnimatedCounter` component using requestAnimationFrame
   - Smooth counting animation on page load
   - 4 key metrics: Courts (150+), Players (25K+), Bookings (50K+), Rating (4.8★)
   - Responsive grid layout (2x2 on mobile, 4x1 on desktop)
 
 - ✅ **Features Section**
-
   - 4 feature cards with icons (Instant Booking, Secure Payment, Flexible Scheduling, Best Venues)
   - Hover animations with scale transform
   - Icon rotation on hover
   - Responsive grid (1 col mobile → 4 cols desktop)
 
 - ✅ **Browse Categories**
-
   - 4 category cards with colored icons
   - Badge showing court count
   - Hover effects and transitions
   - Links to filtered discovery page
 
 - ✅ **Featured Courts Carousel**
-
   - 3 featured court cards with high-quality images
   - Star ratings, reviews, pricing
   - Heart icon for favorites (appears on hover)
@@ -52,7 +47,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Smooth image zoom on hover
 
 - ✅ **Testimonials Section**
-
   - 3 customer testimonials with avatars
   - 5-star ratings displayed visually
   - Responsive grid layout
@@ -73,7 +67,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
 #### Features Implemented:
 
 - ✅ **Advanced Filter System**
-
   - Price range slider (NPR 0-5000)
   - Court type checkboxes (Indoor/Outdoor)
   - Court size filters (5-a-side, 7-a-side)
@@ -83,21 +76,18 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Clear all filters button
 
 - ✅ **Desktop Sidebar**
-
   - Sticky sidebar at `top-20`
   - Rounded card with shadow
   - Collapsible sections with separators
   - Hidden on mobile/tablet (<lg)
 
 - ✅ **Mobile Filter Sheet**
-
   - Slide-in sheet from left
   - Same filter options as desktop
   - Touch-optimized spacing
   - Shows active filter count badge
 
 - ✅ **Sort Options**
-
   - Select dropdown with 5 options:
     - Relevance (default)
     - Price: Low to High
@@ -107,14 +97,12 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Real-time sorting of results
 
 - ✅ **View Toggle**
-
   - Grid view (default) - 2 columns on mobile, 3 on desktop
   - List view - Full-width cards with horizontal layout
   - Smooth transitions between views
   - Hidden on mobile
 
 - ✅ **Grid View Cards**
-
   - Aspect ratio 4:3 images with hover zoom
   - Availability badge (Booked/Available)
   - Heart icon for favorites (appears on hover)
@@ -125,20 +113,17 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Shadow on hover
 
 - ✅ **List View Cards**
-
   - Horizontal layout (image left, content right)
   - 256px wide image on desktop
   - All same information as grid view
   - Optimized for scanning
 
 - ✅ **Loading States**
-
   - Skeleton component for cards
   - Grid of 6 skeletons during load
   - Matches card layout perfectly
 
 - ✅ **Empty State**
-
   - Large search icon
   - Helpful message
   - Clear filters button
@@ -158,7 +143,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
 #### Features Implemented:
 
 - ✅ **Image Gallery with Lightbox**
-
   - Large main image (2x2 grid span on desktop)
   - 4 thumbnail images in grid
   - Click any image to open lightbox
@@ -167,7 +151,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - "View All Photos" button overlay
 
 - ✅ **Lightbox Modal**
-
   - Full-screen dialog with dark background
   - Large image display (object-contain)
   - Previous/Next navigation buttons
@@ -177,7 +160,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Smooth transitions
 
 - ✅ **Enhanced Header**
-
   - Venue name with h1 styling
   - Star rating with review count
   - Location with distance
@@ -185,7 +167,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Tag badges (Indoor, 5-a-side, Premium, Verified)
 
 - ✅ **Sticky Booking Widget**
-
   - Positioned right column, `sticky top-20`
   - Price display (large, prominent)
   - Date picker with calendar popover
@@ -198,25 +179,21 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Free cancellation notice
 
 - ✅ **About Section**
-
   - Multi-paragraph description
   - Professional card layout
   - Easy to read typography
 
 - ✅ **Facilities Grid**
-
   - 8 facility cards (4x2 grid)
   - Icons with colored backgrounds
   - Consistent spacing and alignment
 
 - ✅ **Opening Hours**
-
   - 3-row schedule (Mon-Fri, Sat, Sun)
   - Day/hours in two columns
   - Easy to scan format
 
 - ✅ **Reviews Section**
-
   - Write Review button
   - Avatar images (Dicebear)
   - Name, rating, date
@@ -225,21 +202,18 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Separated by dividers
 
 - ✅ **Similar Venues**
-
   - 3-column grid of recommendations
   - Compact cards with images
   - Rating and price displayed
   - Links to other venue pages
 
 - ✅ **Contact Information Card**
-
   - Phone, email, address
   - Icons for each contact method
   - "View on Map" external link button
   - Clickable phone and email
 
 - ✅ **Share Functionality**
-
   - Native Web Share API integration
   - Fallback for unsupported browsers
   - Shares venue details and URL
@@ -258,7 +232,6 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
 #### Features Implemented:
 
 - ✅ **Brand Section**
-
   - Company name and description
   - Social media icon buttons (4 platforms)
   - Facebook, Twitter, Instagram, LinkedIn
@@ -266,42 +239,36 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
   - Accessible with aria-labels
 
 - ✅ **Quick Links**
-
   - Home, Browse Courts, My Bookings
   - List Your Court, About Us
   - Hover color transitions
   - Proper semantic HTML
 
 - ✅ **Support Section**
-
   - Help Center, Contact Us
   - Terms of Service, Privacy Policy
   - Cancellation Policy
   - Consistent styling with Quick Links
 
 - ✅ **Newsletter Signup**
-
   - Email input with validation
   - Send button with icon
   - Success message (3-second display)
   - Form submission handling
 
 - ✅ **Contact Information**
-
   - Address with MapPin icon
   - Phone with click-to-call link
   - Email with mailto link
   - Icons and hover effects
 
 - ✅ **Bottom Bar**
-
   - Copyright with dynamic year
   - Secondary links (Terms, Privacy, Cookies)
   - Responsive flex layout
   - Centered on mobile, justified on desktop
 
 - ✅ **Styling**
-
   - Consistent with design system
   - Border-top separator
   - Muted background
@@ -324,8 +291,8 @@ All remaining redesign phases (2-7) have been successfully completed! The Eghara
    ```typescript
    images: {
      remotePatterns: [
-       { protocol: "https", hostname: "images.unsplash.com" },
-       { protocol: "https", hostname: "api.dicebear.com" },
+       { protocol: 'https', hostname: 'images.unsplash.com' },
+       { protocol: 'https', hostname: 'api.dicebear.com' },
      ];
    }
    ```
@@ -426,20 +393,17 @@ Key responsive features:
 ## 🚀 Performance Optimizations
 
 1. **Next.js Image Optimization**
-
    - Automatic WebP conversion
    - Lazy loading by default
    - Responsive srcset generation
    - Reduced CLS (Cumulative Layout Shift)
 
 2. **Code Splitting**
-
    - Client components marked with "use client"
    - Server components for static content
    - Suspense boundaries ready for streaming
 
 3. **CSS Optimization**
-
    - Tailwind JIT compilation
    - Unused styles purged
    - CSS variables for theming
@@ -580,13 +544,13 @@ All documentation is located in `/docs`:
 
 Before deploying to production:
 
-- [ ] Run `npm run build` successfully
+- [ ] Run `pnpm build` successfully
 - [ ] Fix any TypeScript errors
 - [ ] Test all pages in production build
 - [ ] Verify environment variables set
 - [ ] Check image optimization working
 - [ ] Test on staging environment
-- [ ] Run security audit (`npm audit`)
+- [ ] Run security audit (`pnpm audit`)
 - [ ] Update dependencies if needed
 - [ ] Create deployment backup
 - [ ] Document any API changes
